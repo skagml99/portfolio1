@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #c8a666;
+    --text-color: #333;
+}
+
+.inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    .inner {
+        max-width: 1170px;
+        margin: 0 auto;
+
+        /* r */
+        margin: 0 16px;
+    }
+}
+
+.default {
+    padding: 80px 0;
+}
+
+.default.bg {
+    background-color: #fffbeb;
+}
+
+.default .title {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.default .title h2 {
+    font-family: "Noto Serif KR", serif;
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* .default .title h2 {
+    font-size: 32px;
+    font-weight: 700;
+} */
+
+.default .title .dese {
+    display: flex;
+    margin-top: 16px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn_default {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 8px 24px;
+
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn_default::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 0;
+    background: #4f4f4f;
+    transition: 0.4s;
+}
+
+.btn_default:hover:before {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+
+.btn_default::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: -2;
+    background: var(--primary-color);
+}
