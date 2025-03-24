@@ -33,7 +33,7 @@ $(function () {
 
 $(function () {
     const MMS = new Swiper('.main_content_slide', {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 30,
         speed: 8000,
         loop: true,
